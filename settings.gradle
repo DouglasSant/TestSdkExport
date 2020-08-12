@@ -1,3 +1,2 @@
-include ':zoom-authentication-8.12.1'
 include ':app', ':VerifyMyAgeSDK'
 rootProject.name = "TestSDKApp"

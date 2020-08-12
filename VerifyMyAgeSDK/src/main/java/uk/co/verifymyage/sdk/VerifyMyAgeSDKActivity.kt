@@ -25,7 +25,7 @@ class VerifyMyAgeSDKActivity : AppCompatActivity() {
     var latestProcessor: Processor? = null
 
     // Handle error retrieving the Session Token from the server
-    var sessionTokenErrorCallback: Processor.SessionTokenErrorCallback =
+    private val sessionTokenErrorCallback: Processor.SessionTokenErrorCallback =
         Processor.SessionTokenErrorCallback { Log.d("SessionTokenError", "DEPOIS") }
 
     fun onLivenessCheckPressed(v: View?) {
