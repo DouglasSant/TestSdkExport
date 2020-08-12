@@ -1,4 +1,4 @@
-package uk.co.verifymyage.sdk.ZoomProcessors;
+package uk.co.verifymyage.sdk.zoomprocessors;
 
 import android.graphics.Color;
 import android.graphics.Rect;

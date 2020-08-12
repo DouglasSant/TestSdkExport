@@ -1,4 +1,4 @@
-package uk.co.verifymyage.sdk.ZoomProcessors;
+package uk.co.verifymyage.sdk.zoomprocessors;
 
 import com.facetec.zoom.sdk.ZoomCustomization;
 

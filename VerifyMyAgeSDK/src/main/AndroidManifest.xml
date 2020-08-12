@@ -5,6 +5,8 @@
 
     <application>
         <activity android:name="uk.co.verifymyage.sdk.VerifyMyAgeSDKActivity" />
+        <activity android:name=".idscan.MainActivity" />
+        <activity android:name=".idscan.MainResultView" />
     </application>
 
 </manifest>

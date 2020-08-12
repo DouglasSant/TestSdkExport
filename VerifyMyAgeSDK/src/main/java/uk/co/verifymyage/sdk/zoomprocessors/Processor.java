@@ -1,4 +1,4 @@
-package uk.co.verifymyage.sdk.ZoomProcessors;
+package uk.co.verifymyage.sdk.zoomprocessors;
 
 public abstract class Processor {
     public abstract boolean isSuccess();

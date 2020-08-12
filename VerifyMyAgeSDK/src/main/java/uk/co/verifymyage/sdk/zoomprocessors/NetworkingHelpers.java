@@ -1,6 +1,6 @@
 // Demonstrates calling the FaceTec Managed Testing API and/or ZoOm Server
 
-package uk.co.verifymyage.sdk.ZoomProcessors;
+package uk.co.verifymyage.sdk.zoomprocessors;
 
 import android.os.Build;
 import android.os.Handler;

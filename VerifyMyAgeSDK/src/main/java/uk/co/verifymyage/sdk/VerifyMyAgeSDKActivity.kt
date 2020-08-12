@@ -1,5 +1,6 @@
 package uk.co.verifymyage.sdk
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
@@ -13,9 +14,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.facetec.zoom.sdk.ZoomIDScanResult
 import com.facetec.zoom.sdk.ZoomSDK
 import com.facetec.zoom.sdk.ZoomSessionResult
-import uk.co.verifymyage.sdk.ZoomProcessors.LivenessCheckProcessor
-import uk.co.verifymyage.sdk.ZoomProcessors.Processor
-import uk.co.verifymyage.sdk.ZoomProcessors.ZoomGlobalState
+import uk.co.verifymyage.sdk.idscan.MainActivity
+import uk.co.verifymyage.sdk.zoomprocessors.LivenessCheckProcessor
+import uk.co.verifymyage.sdk.zoomprocessors.Processor
+import uk.co.verifymyage.sdk.zoomprocessors.ZoomGlobalState
+import java.util.*
 
 
 class VerifyMyAgeSDKActivity : AppCompatActivity() {
@@ -30,6 +33,11 @@ class VerifyMyAgeSDKActivity : AppCompatActivity() {
 
     fun onLivenessCheckPressed(v: View?) {
         latestProcessor = LivenessCheckProcessor(this, sessionTokenErrorCallback)
+    }
+
+    fun idScan(view: View?) {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

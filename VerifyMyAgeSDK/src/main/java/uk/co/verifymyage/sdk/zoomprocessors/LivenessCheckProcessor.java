@@ -4,7 +4,7 @@
 // 60 seconds. This provides a failsafe for users getting stuck in the process because of a networking
 // issue. If you would like to force users to stay on the Progress Screen for longer than 60 seconds,
 // you can write code in the FaceMap or ID Scan Processor to call onProgress() via your own custom logic.
-package uk.co.verifymyage.sdk.ZoomProcessors;
+package uk.co.verifymyage.sdk.zoomprocessors;
 
 import android.content.Context;
 
