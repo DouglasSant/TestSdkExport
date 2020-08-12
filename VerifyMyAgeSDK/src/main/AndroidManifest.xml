@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.co.verifymyage.sdk">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity android:name="uk.co.verifymyage.sdk.VerifyMyAgeSDKActivity" />
+    </application>
+
+</manifest>
