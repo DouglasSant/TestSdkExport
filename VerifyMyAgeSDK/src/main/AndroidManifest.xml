@@ -4,7 +4,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application>
-        <activity android:name="uk.co.verifymyage.sdk.VerifyMyAgeSDKActivity" />
+        <activity android:name="uk.co.verifymyage.sdk.VerifyOptionsActivity" />
+        <activity android:name="uk.co.verifymyage.sdk.VerifyMyAgeVerificationFlow" />
+        <activity android:name="uk.co.verifymyage.sdk.VerificationsResultActivity" />
+        <activity android:name="uk.co.verifymyage.sdk.IdActivity" />
         <activity android:name=".idscan.MainActivity" />
         <activity android:name=".idscan.MainResultView" />
     </application>

@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.text.Html
 import android.util.Log
 import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.facetec.zoom.sdk.ZoomIDScanResult
@@ -18,10 +17,9 @@ import uk.co.verifymyage.sdk.idscan.MainActivity
 import uk.co.verifymyage.sdk.zoomprocessors.LivenessCheckProcessor
 import uk.co.verifymyage.sdk.zoomprocessors.Processor
 import uk.co.verifymyage.sdk.zoomprocessors.ZoomGlobalState
-import java.util.*
 
 
-class VerifyMyAgeSDKActivity : AppCompatActivity() {
+class VerifyOptionsActivity : AppCompatActivity() {
 
     var latestZoomSessionResult: ZoomSessionResult? = null
     var latestZoomIDScanResult: ZoomIDScanResult? = null
@@ -42,7 +40,7 @@ class VerifyMyAgeSDKActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.vma_sdk_main)
+        setContentView(R.layout.verification_options_screen)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#f9ac19")))
@@ -55,7 +53,7 @@ class VerifyMyAgeSDKActivity : AppCompatActivity() {
         val message = intent.getStringExtra("EXTRA_MESSAGE")
 
         // Capture the layout's TextView and set the string as its text
-        findViewById<TextView>(R.id.textView).text = message
+        //findViewById<TextView>(R.id.textView).text = message
 
         val context = this
 
