@@ -6,13 +6,10 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.verification_results_screen.*
-import uk.co.verifymyage.sdk.idscan.MainActivity
 import uk.co.verifymyage.sdk.zoomprocessors.LivenessCheckProcessor
-import uk.co.verifymyage.sdk.zoomprocessors.Processor
 
 class VerificationsResultActivity : AppCompatActivity() {
 
@@ -29,7 +26,7 @@ class VerificationsResultActivity : AppCompatActivity() {
             window.statusBarColor = Color.parseColor("#fbc359")
         };
 
-        //TODO: here we get the result from previous view and set it to this.verificationResult
+        verificationResult = intent.getStringExtra("REAUTHENTICATE") != null && intent.getStringExtra("REAUTHENTICATE") == "true";
         if (verificationResult) {
             successText.text = "Success";
             titleText.text = "Select continue to open camera to take a photo"

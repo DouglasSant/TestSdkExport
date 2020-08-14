@@ -23,15 +23,27 @@ public final class VerifyMyAgeVerificationFlow : AppCompatActivity() {
         };
 
         doAsync {
-            //TODO: here we add the api call
-            Thread.sleep(3000)
+            var vmaApi = VMAApi(
+                intent.getStringExtra("API_ID").toString(),
+                intent.getStringExtra("API_KEY").toString(),
+                intent.getStringExtra("API_SECRET").toString()
+            );
+            var customer  = VmaCustomer(
+                intent.getStringExtra("id").toString(),
+                intent.getStringExtra("firstName").toString(),
+                intent.getStringExtra("lastName").toString(),
+                intent.getStringExtra("email").toString(),
+                intent.getStringExtra("phone").toString()
+            );
+            var response = vmaApi.request("POST", "/verifications", customer)
             val intent = Intent(this, VerificationsResultActivity::class.java).apply {
-                putExtra("VERIFICATION_RESULT", true)
+                putExtra("REAUTHENTICATE", response.getString("reauthenticate"))
+                putExtra("CLIENT_ID", response.getString("client_id"))
+                putExtra("STATUS", response.getString("status"))
+                putExtra("URL", response.getString("url"))
             }
             startActivity(intent)
         }.execute()
-
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
