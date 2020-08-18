@@ -1,2 +1,2 @@
-include ':app', ':VerifyMyAgeSDK'
+include ':app'
 rootProject.name = "TestSDKApp"
